@@ -1,3 +1,5 @@
 .box {
-  border: 1px solid black;
+  box-shadow: 0 2px 10px rgba(60, 60, 60, 0.1); /* Lightweight box shadow */
+  padding: 16px; /* Optional: Add some padding for better aesthetics */
+  border-radius: 7px; /* Optional: Add rounded corners */
 }

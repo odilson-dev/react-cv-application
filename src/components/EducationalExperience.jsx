@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "../styles/style.css";
 
-function EducationalExperience() {
+function EducationalExperience({ className }) {
   // State to hold form input values
   const [formData, setFormData] = useState({
     schoolName: "",
@@ -21,8 +22,7 @@ function EducationalExperience() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform any action here, such as submitting the data to a server
-    console.log(formData);
+
     setIsOnEdit(false);
   };
   // Handle form Edition
@@ -33,7 +33,7 @@ function EducationalExperience() {
   console.log(isOnEdit);
   if (isOnEdit) {
     return (
-      <div>
+      <div className={className}>
         <h2>Educational Experience</h2>
         <form onSubmit={handleSubmit}>
           <label>
@@ -72,7 +72,7 @@ function EducationalExperience() {
     );
   } else {
     return (
-      <div>
+      <div className={className}>
         <h2>Educational Experience</h2>
         <p>School Name: {formData.schoolName}</p>
         <p>Title of Study: {formData.titleOfStudy}</p>

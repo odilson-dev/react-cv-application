@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-function PracticalExperience() {
+import "../styles/style.css";
+function PracticalExperience({ className }) {
   // State to hold form input values
   const [formData, setFormData] = useState({
     companyName: "",
@@ -23,8 +23,7 @@ function PracticalExperience() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform any action here, such as submitting the data to a server
-    console.log(formData);
+    
     setIsOnEdit(false);
   };
   // Handle form Edition
@@ -35,7 +34,7 @@ function PracticalExperience() {
   console.log(isOnEdit);
   if (isOnEdit) {
     return (
-      <div>
+      <div className={className}>
         <h2>Practical Experience</h2>
         <form onSubmit={handleSubmit}>
           <label>
@@ -94,7 +93,7 @@ function PracticalExperience() {
     );
   } else {
     return (
-      <div>
+      <div className={className}>
         <h2>Practical Experience</h2>
         <p>Company Name: {formData.companyName}</p>
         <p>Position Title: {formData.positionTitle}</p>

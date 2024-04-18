@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-function GeneralInformation() {
+import "../styles/style.css";
+function GeneralInformation({ className }) {
   // State to hold form input values
   const [formData, setFormData] = useState({
     name: "",
@@ -21,8 +21,7 @@ function GeneralInformation() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform any action here, such as submitting the data to a server
-    console.log(formData);
+   
     setIsOnEdit(false);
   };
   // Handle form Edition
@@ -33,7 +32,7 @@ function GeneralInformation() {
   console.log(isOnEdit);
   if (isOnEdit) {
     return (
-      <div>
+      <div className={className}>
         <h2>General Information</h2>
         <form onSubmit={handleSubmit}>
           <label>
@@ -72,7 +71,7 @@ function GeneralInformation() {
     );
   } else {
     return (
-      <div>
+      <div className={className}>
         <h2>General Information</h2>
         <p>Name: {formData.name}</p>
         <p>Email: {formData.email}</p>
