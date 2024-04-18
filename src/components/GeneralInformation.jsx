@@ -34,7 +34,7 @@ function GeneralInformation() {
   if (isOnEdit) {
     return (
       <div>
-        <h2>Contact Form</h2>
+        <h2>General Information</h2>
         <form onSubmit={handleSubmit}>
           <label>
             Name:
