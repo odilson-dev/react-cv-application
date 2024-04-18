@@ -2,7 +2,7 @@
 
 ## Introduction
 
-React CV Builder is a project that allows users to create a curriculum vitae (CV) through an interactive web application. This project leverages the power of React to efficiently manage the application state and render dynamic components. Users can input their general information, educational experience, and practical experience, and then submit the information to display a formatted CV.
+React CV Application is a project that allows users to create a curriculum vitae (CV) through an interactive web application. This project leverages the power of React to efficiently manage the application state and render dynamic components. Users can input their general information, educational experience, and practical experience, and then submit the information to display a formatted CV.
 
 ## Features
 
